@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form.css">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <p>
+            Para fazer parte da #Minions nosso primeiro pré requisito é: "Ter garra para fazer acontecer!" Além disso, você precisa ser aluno matriculado em uma Universidade. Para mais informações, só abrir nosso edital no link abaixo! É muito importante que todos leiam!
+        </p>
+        
+            <span class="espaco">bit.ly/Edital_20_x</span>
+        
+
+        <p>
+            <span class="red">*</span>Olá! Fico muito Feliz que você tenha se interessado em participar! Primeiro me conta qual é o seu Nome Completo!
+        </p>
+        <input type="text">
+        <p>
+            <span class="red">*</span>Você é aluno de uma Universidade?
+        </p>
+        <input type="radio" name="aluno" id=""> Sim <br>
+        <input type="radio" name="aluno" id=""> Não <br>
+
+        <p>
+            <span class="red">*</span>Em que cidade seu campus se localiza?
+        </p>
+        <input type="radio" name="cidade" id=""> Salvador <br>
+        <input type="radio" name="cidade" id=""> Feria de Santana <br>
+        <p>
+            <span class="red">*</span>Qual seu curso?
+        </p>
+        <input type="radio" name="curso" id=""> Arquitetura e Urbanismo <br>
+        <input type="radio" name="curso" id=""> Engenharia Civil <br>
+        <input type="radio" name="curso" id=""> Engenharia Elétrica <br>
+        <input type="radio" name="curso" id=""> Engenharia Mecânica <br>
+        <input type="radio" name="curso" id=""> Engenharia de Produção <br>
+
+        <p>
+            <span class="red">*</span>Qual seu semestre?
+        </p>
+        <input type="text" name="" id=""> 
+        <p>
+            <span class="red">*</span>Diz para a gente o seu melhor e-mail
+        </p>
+        <input type="text" name="" id="">
+        <p>
+            <span class="red">*</span>Por qual número de telefone podemos entrar em contato?
+        </p> 
+        <input type="tel" name="" id="">
+        <p>
+            <span class="red">*</span>Para melhor acompanharmos os seus dados institucionais, anexe abaixo a sua ficha de matrícula atualizada.
+        </p>
+        <p>
+            <span class="red">*</span>Agora diz para a gente como você chegou até aqui
+        </p>
+        <input style="background-color: #EEF2F8;"  type="checkbox" name="nindicacao" id=""> Indicação <br>
+        <input type="checkbox" name="ngrupo" id=""> Grupo da sala <br>
+        <input type="checkbox" name="ndivugacao" id=""> Divugação na sala <br>
+        <input type="checkbox" name="ninstagram" id=""> Instagram <br>
+        <input type="checkbox" name="nwhatsapp" id=""> Whatsapp <br>
+        <button type="button" onclick="marcarTodos" id="marcar-todos">Marcar todos</button>
+
+        <p>
+            <span class="red">*</span>Por fim, me conta um pouquinho do que te despertou interesse em se inscrever no nosso processo seletivo! <br><br>
+
+            <textarea style="background-color: #EEF2F8; resize:vertical;" cols="20" rows="7" name="" id=""></textarea>
+        </p> <br>
+
+        
+
+        <input type="submit" value="Inscrever-se"> 
+
+        <p>
+            Nunca envie senhas ou dados confidenciais por meio de formulários desconhecidos. Certifique-se de que este formulário foi gerado por sua empresa ou por uma empresa confiável.
+        </p>
+
+        <a href=""> Denunciar abuso </a>
+        <a style="margin-left: 10px;" href=""> Termos e condições </a>
+
+    </form>
+
+    <script>
+        var checkboxes = document.querySelectorAll('input[type="checkbox"]')
+        var bt = document.getElementById("marcar-todos");
+        bt.addEventListener("click", (event) => {
+            
+            
+            if (bt.innerHTML == "Desmarcar todos") {
+                checkboxes.forEach((checkbox) => {
+                    if (checkbox.checked) {
+                        checkbox.checked = false;
+                    }
+                });
+                bt.innerHTML = "Marcar todos"
+                return;
+            }
+
+            checkboxes.forEach((checkbox) => {
+                
+                if (!checkbox.checked) {
+                    checkbox.checked = true;
+                    bt.innerHTML = "Desmarcar todos";
+                }
+
+            });
+
+       });
+    </script>
+</body>
+</html>

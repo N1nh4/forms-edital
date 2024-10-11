@@ -1,0 +1,35 @@
+@charset "utf-8";
+
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.red {
+    color: red;
+}
+
+.espaco {
+    display: block;
+    margin: 30px 0px;
+}
+
+form {
+    width: 500px;
+    margin: auto;
+    
+}
+
+input[type="text"], input[type="tel"] {
+    background-color: #EEF2F8;
+    border: none;
+    
+   
+}
+
+input {
+   font-weight: bolder;
+}
+
+p {
+    font-weight: 550;
+    
+}
